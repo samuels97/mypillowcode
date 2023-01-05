@@ -28,4 +28,14 @@ def tnails():
 	except IOError:
 		pass
 
-tnails()
+#tnails()
+
+def MergeImage():
+	image = Image.open('christmas.bmp')
+	r, g, b = image.split()
+	image.show()
+	image = Image.merge("RGB", (b, r, g))
+	image.show()
+
+
+MergeImage()
