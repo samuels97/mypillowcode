@@ -13,5 +13,19 @@ print(im.size)
 print(im.width)
 print(im.height)
 #im.save('christmas.bmp')
-im1 = Image.open('christmas.bmp')
-im1.show()
+#im1 = Image.open('christmas.bmp')
+#im1.show()
+
+def tnails():
+	try:
+		print("Started action")
+		image = Image.open('christmas.bmp')
+		image.thumbnail((90,90))
+		image.save('thumbnail.jpg')
+		image1 = Image.open('thumbnail.jpg')
+		image1.show()
+		print("End of action")
+	except IOError:
+		pass
+
+tnails()
